@@ -211,10 +211,11 @@ new_go_repository(
 
 load("//:repositories.bzl", "new_git_or_local_repository")
 
+ISTIO_API = "ee9769f5b3304d9e01cd7ed6fb1dbb9b08e96210"
 new_git_or_local_repository(
     name = "com_github_istio_api",
     build_file = "BUILD.api",
-    commit = "ee9769f5b3304d9e01cd7ed6fb1dbb9b08e96210",  # June 29, 2017 (no releases)
+    commit = ISTIO_API
     path = "../api",
     remote = "https://github.com/istio/api.git",
     # Change this to True to use ../api directory
